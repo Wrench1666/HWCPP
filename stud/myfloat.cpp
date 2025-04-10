@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 #include "myfloat.h"
-
 myfloat::myfloat(double val = 0.0)
 {
 	m = 0;
@@ -87,3 +86,4 @@ myfloat operator*(myfloat a, myfloat b)
 {
 	return myfloat((a.m * b.m), a.e + b.e - 3);
 }
+

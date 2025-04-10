@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClInclude Include="myfloat.h" />
     <ClInclude Include="fsat.h" />
+    <ClInclude Include="tempvect.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

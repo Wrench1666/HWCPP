@@ -18,7 +18,7 @@ vector::vector(const vector& a):vector(a.size())
 	}
 }
 
-vector::vector(vector&& a) //тебе это не нужно
+vector::vector(vector&& a) 
 {
 	sz = a.size();
 	v = a.v;
@@ -54,7 +54,7 @@ void vector::operator=(const vector& a)
 	}
 }
 
-void vector::operator=(vector&& a) //тебе это не нужно
+void vector::operator=(vector&& a) 
 {
 	delete[] v;
 	sz = a.size();
@@ -99,31 +99,31 @@ void vector::print(void)
 	}
 }
 
-void error(const int a)
-{
-	switch (a)
-	{
-	case 123:
-		printf("Размер вектора может быть меньше или равен нулю\n");
-		break;
-	case 456:
-		printf("Не удалось выделить память\n");
-		break;
-	case 891:
-		printf("Повторное удаление элемента\n");
-		break;
-	case 666:
-		printf("Индекс вектора выходит за пределы диапазона\n");
-		break;
-	case 889:
-		printf("Приравневание невозможно: разный размер векторов\n");
-		break;
-	case 998:
-		printf("Сложение/вычитание невозможно: разный размер векторов\n");
-		break;
-	default:
-		printf("Неизвестная ошибка %d\n",a);
-		break;
-	}
-	exit(EXIT_FAILURE);
-}
+//void error(const int a)
+//{
+//	switch (a)
+//	{
+//	case 123:
+//		printf("Размер вектора может быть меньше или равен нулю\n");
+//		break;
+//	case 456:
+//		printf("Не удалось выделить память\n");
+//		break;
+//	case 891:
+//		printf("Повторное удаление элемента\n");
+//		break;
+//	case 666:
+//		printf("Индекс вектора выходит за пределы диапазона\n");
+//		break;
+//	case 889:
+//		printf("Приравневание невозможно: разный размер векторов\n");
+//		break;
+//	case 998:
+//		printf("Сложение/вычитание невозможно: разный размер векторов\n");
+//		break;
+//	default:
+//		printf("Неизвестная ошибка %d\n",a);
+//		break;
+//	}
+//	exit(EXIT_FAILURE);
+//}

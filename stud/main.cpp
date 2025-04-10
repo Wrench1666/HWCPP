@@ -1,37 +1,63 @@
 #include "myfloat.h"
 #include "fsat.h"
-#include "vector.h"
-#include <stdio.h>
-#include <iostream>
+#include "tempvect.h"
 
 
 
 int main()
 {
-	setlocale(LC_ALL, "ru-RU");
-	vector a = 5;
-	vector b = 5;
-	for (int i = 0; i < a.size(); i++)
-	{
-		a[i] = i + 0.1;
-		b[i] = i + 1.2;
-	}
-	printf("a:"); a.print(); printf("\n");
-	printf("b:"); b.print(); printf("\n");
-	vector c = a + b;
-	c = a + b;
-	printf("a+b:"); c.print(); printf("\n");
-	vector d = b - a;
-	printf("b-a:"); d.print(); printf("\n");
-	vector e = 6;
-//	error(__LINE__);
-	e = a;
-	e.print();
-//	error(__LINE__);
-	printf("%d", e.size());
-
-
+	tempvect<tempvect<int>> a(3);
+	a.print();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//int main()
+//{
+//	setlocale(LC_ALL, "ru-RU");
+//	vector a = 5;
+//	vector b = 5;
+//	for (int i = 0; i < a.size(); i++)
+//	{
+//		a[i] = i + 0.1;
+//		b[i] = i + 1.2;
+//	}
+//	printf("a:"); a.print(); printf("\n");
+//	printf("b:"); b.print(); printf("\n");
+//	vector c = a + b;
+//	c = a + b;
+//	printf("a+b:"); c.print(); printf("\n");
+//	vector d = b - a;
+//	printf("b-a:"); d.print(); printf("\n");
+//	vector e = 6;
+////	error(__LINE__);
+//	e = a;
+//	e.print();
+////	error(__LINE__);
+//	printf("%d", e.size());
+//
+//
+//}
 
 
 

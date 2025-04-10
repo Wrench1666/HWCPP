@@ -8,14 +8,14 @@ class vector
 public:
 	vector(int s=100);
 	vector(const vector&);
-	vector(vector&&); // тебе это не нужно 
+	vector(vector&&); 
 	~vector(); 
 	inline int size(void) const { return sz; }
 	fsat& operator[](int);
 	inline fsat& elem(int i) const { return v[i]; }
 	void print(void);
 	void operator=(const vector&);
-	void operator=(vector&&); // тебе это не нужно
+	void operator=(vector&&); 
 	vector operator+(vector& a);
 	vector operator-(vector& a);
 };
