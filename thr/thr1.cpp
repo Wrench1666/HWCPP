@@ -9,7 +9,7 @@ std::atomic<long long> counter2 = 0;
 CRITICAL_SECTION win_cs;
 std::mutex counter_mutex;
 int val;
-#define REPEATER 100
+#define REPEATER 1000
 
 void add1or2T(int a)
 {
@@ -177,17 +177,14 @@ int main()
 
 	test1T(val);
 	std::cout << "\nCounter = " << counter;
-	counter = 0;
 	std::cout << "\n\n2T\n";
 
 	test2T(val);
 	std::cout << "\nCounter = " << counter;
-	counter = 0;
 	std::cout << "\n\nMutex\n";
 
 	testmutex(val);
 	std::cout << "\nCounter = " << counter;
-	counter = 0;
 	std::cout << "\n\nAtomic\n";
 
 	testatomic(val);
