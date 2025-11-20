@@ -35,7 +35,7 @@ void sub1or2T(int a)
 
 void test1T(int a)
 {
-	clock_t time0, time1;
+	clock_t time0;
 	counter = 0;
 	time0 = clock();
 	add1or2T(a);
@@ -46,7 +46,7 @@ void test1T(int a)
 
 void test2T(int a)
 {
-	clock_t time0, time1;
+	clock_t time0;
 	counter = 0;
 	time0 = clock();
 	std::thread th1(add1or2T, a);
@@ -85,7 +85,7 @@ void submutex(int a)
 
 void testmutex(int a)
 {
-	clock_t time0, time1;
+	clock_t time0;
 	counter = 0;
 	time0 = clock();
 	std::thread th1(addmutex, a);
@@ -120,7 +120,7 @@ void subatomic(int a)
 
 void testatomic(int a)
 {
-	clock_t time0, time1;
+	clock_t time0;
 	counter = 0;
 	time0 = clock();
 	std::thread th1(addatomic, a);
@@ -159,7 +159,7 @@ void subcs(int a)
 
 void testcs(int a)
 {
-	clock_t time0, time1;
+	clock_t time0;
 	counter = 0;
 	time0 = clock();
 	std::thread th1(addcs, a);
